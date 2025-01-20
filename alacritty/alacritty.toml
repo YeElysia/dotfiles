@@ -1,0 +1,71 @@
+
+#改变窗口设置
+[window]
+#窗口大小
+#dimensions = { columns = 135, lines = 30 }
+#padding = { x = 4, y = 2 }
+#dynamic_padding = true
+#透明度
+opacity = 0.8
+#窗口名字
+title = "Alacritty"
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+#env = {TERM = "xterm-truecolor"}
+
+#字体
+[font]
+normal = { family = "JetbrainsMonoNerdFont", style = "Regular" }
+bold = { family = "JetbrainsMonoNerdFont", style = "Bold" }
+italic = { family = "JetbrainsMonoNerdFont", style = "italic" }
+size = 12.0
+
+[colors.primary]
+background = '#1d1f21'
+foreground = '#c5c8c6'
+
+[colors.cursor]
+text = '#1d1f21'
+cursor = '#ffffff'
+
+# Normal colors
+[colors.normal]
+black   = '#1d1f21'
+red     = '#cc6666'
+green   = '#b5bd68'
+yellow  = '#e6c547'
+blue    = '#81a2be'
+magenta = '#b294bb'
+cyan    = '#70c0ba'
+white   = '#373b41'
+
+# Bright colors
+[colors.bright]
+black   = '#666666'
+red     = '#ff3334'
+green   = '#9ec400'
+yellow  = '#f0c674'
+blue    = '#81a2be'
+magenta = '#b77ee0'
+cyan    = '#54ced6'
+white   = '#282a2e'
+
+[keyboard]
+bindings = [
+{ key = "F11",mods =  "None", action = "ToggleFullscreen" }
+]
+
+#光标
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[terminal]
+#设定复制黏贴行为 默认只能复制
+osc52 = "CopyPaste"
+
+[general]
+#设置改变配置自动启动 [window]的需要重启
+live_config_reload = true
